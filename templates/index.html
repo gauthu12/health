@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebApp Health Check Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>WebApp Health Check Dashboard</h2>
+    <table class="table table-bordered mt-3">
+        <thead><tr><th>Application</th><th>Status</th></tr></thead>
+        <tbody>
+            {% for app, stat in status.items() %}
+            <tr>
+                <td>{{ app }}</td>
+                <td>
+                    {% if stat == "UP" %}
+                        <span class="badge badge-success">UP</span>
+                    {% else %}
+                        <span class="badge badge-danger">DOWN</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p class="text-muted">Auto-refreshes every minute.</p>
+</div>
+</body>
+</html>

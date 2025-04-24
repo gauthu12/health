@@ -1,0 +1,20 @@
+[
+  {
+    "name": "DemoApp1",
+    "url": "http://example.com/login",
+    "username": "user1",
+    "password": "pass1",
+    "username_field": "username",
+    "password_field": "password",
+    "submit_button": "login"
+  },
+  {
+    "name": "DemoApp2",
+    "url": "http://test.com/login",
+    "username": "admin",
+    "password": "admin123",
+    "username_field": "user",
+    "password_field": "pass",
+    "submit_button": "submit"
+  }
+]
